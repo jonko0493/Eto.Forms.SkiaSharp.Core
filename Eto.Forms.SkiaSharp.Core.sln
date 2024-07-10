@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eto.Forms.Controls.SkiaSharp.Shared", "Eto.Forms.Controls.SkiaSharp.Shared\Eto.Forms.Controls.SkiaSharp.Shared.csproj", "{8C7A9133-0411-4C8B-A150-950CCAAFDFA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eto.Forms.Controls.SkiaSharp.GTK", "Eto.Forms.Controls.SkiaSharp.GTK\Eto.Forms.Controls.SkiaSharp.GTK.csproj", "{3FB173F1-A0CE-43E4-8552-1D4AD207FBDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eto.Forms.Controls.SkiaSharp.Mac", "Eto.Forms.Controls.SkiaSharp.Mac\Eto.Forms.Controls.SkiaSharp.Mac.csproj", "{AC0F6AF2-1CA2-4124-A639-90F87B66FFBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eto.Forms.Controls.SkiaSharp.WPF", "Eto.Forms.Controls.SkiaSharp.WPF\Eto.Forms.Controls.SkiaSharp.WPF.csproj", "{036E7BFE-5B10-460E-9AC5-F6F04898FEB3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C7A9133-0411-4C8B-A150-950CCAAFDFA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C7A9133-0411-4C8B-A150-950CCAAFDFA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C7A9133-0411-4C8B-A150-950CCAAFDFA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C7A9133-0411-4C8B-A150-950CCAAFDFA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FB173F1-A0CE-43E4-8552-1D4AD207FBDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FB173F1-A0CE-43E4-8552-1D4AD207FBDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FB173F1-A0CE-43E4-8552-1D4AD207FBDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FB173F1-A0CE-43E4-8552-1D4AD207FBDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC0F6AF2-1CA2-4124-A639-90F87B66FFBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC0F6AF2-1CA2-4124-A639-90F87B66FFBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC0F6AF2-1CA2-4124-A639-90F87B66FFBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC0F6AF2-1CA2-4124-A639-90F87B66FFBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{036E7BFE-5B10-460E-9AC5-F6F04898FEB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{036E7BFE-5B10-460E-9AC5-F6F04898FEB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{036E7BFE-5B10-460E-9AC5-F6F04898FEB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{036E7BFE-5B10-460E-9AC5-F6F04898FEB3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B3D28BB-18A8-4CCE-BA66-A295E546396B}
+	EndGlobalSection
+EndGlobal
