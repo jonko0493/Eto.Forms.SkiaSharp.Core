@@ -24,7 +24,7 @@ stages:
   jobs:
   - job:
     pool:
-      vmImage: ubuntu-latest
+      vmImage: windows-latest
     displayName: Build and publish nupkgs
     steps:
     - task: NuGetAuthenticate@1
