@@ -1,0 +1,51 @@
+trigger:
+- none
+pr:
+- none
+
+parameters:
+- name: version
+  displayName: Release Version
+  type: string
+  default: ''
+- name: releaseNotes
+  displayName: Release Notes
+  type: string
+  default: ''
+
+variables:
+- name: Version
+  value: ${{ parameters.version }}
+
+stages:
+- stage: Publish NuGet packages
+  dependsOn: []
+  jobs:
+  - job:
+    pool:
+      vmImage: ubuntu-latest
+    displayName: Build and publish nupkgs
+    steps:
+    - task: NuGetAuthenticate@1
+      displayName: NuGet Authenticate
+        
+    - script: |
+        mkdir nupkgs
+
+        dotnet build $(Build.SourcesDirectory)/Eto.Forms.Controls.SkiaSharp.Shared/Eto.Forms.Controls.SkiaSharp.Shared.csproj --configuration Release
+        dotnet build $(Build.SourcesDirectory)/Eto.Forms.Controls.SkiaSharp.WPF/Eto.Forms.Controls.SkiaSharp.WPF.csproj --configuration Release
+        dotnet build $(Build.SourcesDirectory)/Eto.Forms.Controls.SkiaSharp.Mac/Eto.Forms.Controls.SkiaSharp.Mac.csproj  --configuration Release
+        dotnet build $(Build.SourcesDirectory)/Eto.Forms.Controls.SkiaSharp.GTK/Eto.Forms.Controls.SkiaSharp.GTK.csproj --configuration Release
+
+        dotnet pack $(Build.SourcesDirectory)/Eto.Forms.Controls.SkiaSharp.Shared/Eto.Forms.Controls.SkiaSharp.Shared.csproj --output $(Build.ArtifactStagingDirectory) --configuration Release
+        dotnet pack $(Build.SourcesDirectory)/Eto.Forms.Controls.SkiaSharp.WPF/Eto.Forms.Controls.SkiaSharp.WPF.csproj --output $(Build.ArtifactStagingDirectory) --configuration Release
+        dotnet pack $(Build.SourcesDirectory)/Eto.Forms.Controls.SkiaSharp.Mac/Eto.Forms.Controls.SkiaSharp.Mac.csproj --output $(Build.ArtifactStagingDirectory) --configuration Release
+        dotnet pack $(Build.SourcesDirectory)/Eto.Forms.Controls.SkiaSharp.GTK/Eto.Forms.Controls.SkiaSharp.GTK.csproj --output $(Build.ArtifactStagingDirectory) --configuration Release
+      displayName: Build and pack nupkgs
+
+    - task: NuGetCommand@2
+      displayName: NuGet push
+      inputs:
+        command: push
+        publishVstsFeed: '8e493568-9b6e-4515-b47e-2519d156de66/7ebb410f-5a76-445b-9193-e9e720c82d8c'
+        allowPackageConflicts: true
