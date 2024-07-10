@@ -18,7 +18,8 @@ variables:
   value: ${{ parameters.version }}
 
 stages:
-- stage: Publish NuGet packages
+- stage: Publish_Nupkgs
+  displayName: Publish NuGet Packges
   dependsOn: []
   jobs:
   - job:
