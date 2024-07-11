@@ -1,12 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Version>$(Version)</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Eto.Platform.Gtk" Version="2.8.3" />
+    <PackageReference Include="OpenTK.Core" Version="4.8.2" />
+    <PackageReference Include="OpenTK.GLControl" Version="3.3.3" />
+    <PackageReference Include="OpenTK.Graphics" Version="4.8.2" />
+    <PackageReference Include="OpenTK.Mathematics" Version="4.8.2" />
+    <PackageReference Include="OpenTK.Windowing.Common" Version="4.8.2" />
     <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="2.88.8" />
   </ItemGroup>
 
